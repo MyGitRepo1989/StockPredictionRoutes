@@ -94,4 +94,6 @@ python stock_app.py
 </ul>
 
 <p><strong>Note:</strong> Ensure the directory structure includes <code>static/</code> and <code>stock_models/</code> folders at the same level as <code>app.py</code>.</p>
+<h2> Prediction Results </h2>
+<img src ="7day_prediction_results.png">
 
