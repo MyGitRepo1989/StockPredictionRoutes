@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Analysis</title>
+    
+    <!-- Link to Google Fonts for Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px; /* Updated font size */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Headings */
+        h1, h2 {
+            font-weight: bold;
+            
+            color: #333;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 31px !important; /* Larger size for main title */
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px !important;
+            margin-top: 10px;
+            font-weight: 900;
+        }
+
+        /* Paragraphs */
+        p {
+            margin-bottom: 10px;
+        }
+
+        /* Links */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container for the content */
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1400px;
+            
+        }
+
+        /* Card-like design for each section */
+        .section-card {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ffffff;
+            border-radius: 8px;
+            
+        }
+
+        /* Bold the section labels */
+        .section-card h2 {
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Optional: Style for the definition labels in the sections */
+        .section-card p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>AI Stock Analysis</h1>
+
+        <!-- Selected Ticker -->
+        <div class="section-card">
+            <h2>Selected Ticker</h2>
+            <p>{{ ticker_selected }}</p>
+        </div>
+
+        <!-- Price-to-Book Ratio -->
+        <div class="section-card">
+            <h2>Price-to-Book Ratio</h2>
+            <p><strong>Definition:</strong> {{ PB_Ratio_Defination }}</p>
+            <p><strong>Stock PB Ratio:</strong> {{ stock_pb_ratio }}</p>
+            <p><strong>Stock Benchmark:</strong> {{ stock_benchmark }}</p>
+            <p><strong>Stock Trend:</strong> {{ stock_trend }}</p>
+            <p><strong>Stock Comment:</strong> {{ stock_comment }}</p>
+            <p><strong>Summary:</strong> {{ pb_summary }}</p>
+        </div>
+
+        <!-- Return on Equity (ROE) -->
+        <div class="section-card">
+            <h2>Return on Equity (ROE)</h2>
+            <p><strong>Definition:</strong> {{ ROE_Defination }}</p>
+            <p><strong>Ticker:</strong> {{ ticker_name }}</p>
+            <p><strong>Current Value:</strong> {{ ticker_current }}</p>
+            <p><strong>ROE Ratio:</strong> {{ stock_roe_ratio }}</p>
+            <p><strong>ROE Benchmark:</strong> {{ roe_stock_benchmark }}</p>
+            <p><strong>ROE Trend:</strong> {{ roe_stock_trend }}</p>
+            <p><strong>ROE Comment:</strong> {{ roe_stock_comment }}</p>
+            <p><strong>Summary:</strong> {{ roe_summary }}</p>
+        </div>
+
+        <!-- Simple Moving Average (SMA) -->
+        <div class="section-card">
+            <h2>Simple Moving Average (SMA)</h2>
+            <p><strong>Definition:</strong> {{ sma_defination }}</p>
+            <p><strong>50-Day SMA:</strong> {{ stock_sma_50 }}</p>
+            <p><strong>SMA Benchmark:</strong> {{ sma_stock_benchmark }}</p>
+            <p><strong>SMA Trend:</strong> {{ sma_stock_trend }}</p>
+            <p><strong>SMA Comment:</strong> {{ sma_stock_comment }}</p>
+            <p><strong>Summary:</strong> {{ sma_summary }}</p>
+        </div>
+
+        <!-- Revenue Change -->
+        <div class="section-card">
+            <h2>Revenue Change</h2>
+            <p><strong>Definition:</strong> {{ revenue_change_defination }}</p>
+            <p><strong>Stock Revenue:</strong> {{ stock_revenue }}</p>
+            <p><strong>Revenue Benchmark:</strong> {{ revenue_stock_benchmark }}</p>
+            <p><strong>Revenue Trend:</strong> {{ revenue_stock_trend }}</p>
+            <p><strong>Revenue Comment:</strong> {{ revenue_stock_comment }}</p>
+            <p><strong>Summary:</strong> {{ revenue_summary }}</p>
+        </div>
+
+        <!-- Debt-to-Equity Ratio -->
+        <div class="section-card">
+            <h2>Debt-to-Equity Ratio</h2>
+            <p><strong>Definition:</strong> {{ debt_ratio_defination }}</p>
+            <p><strong>Stock Debt:</strong> {{ stock_debt }}</p>
+            <p><strong>Debt Benchmark:</strong> {{ stock_benchmark_debt }}</p>
+            <p><strong>Debt Trend:</strong> {{ stock_trend_debt }}</p>
+            <p><strong>Debt Comment:</strong> {{ stock_comment_debt }}</p>
+            <p><strong>Summary:</strong> {{ summary_debt }}</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
